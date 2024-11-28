@@ -7,8 +7,9 @@
   "main": "src/main.js",
   "author": "Bilal Oulahal",
   "scripts": {
+    "check-type": "tsc --noEmit",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

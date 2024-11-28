@@ -28,6 +28,7 @@ npm install
 
 ## Available Scripts
 
+- `check-type` - check for TypeScript type errors
 - `dev` - run on localhost
 - `build` - transpile TypeScript to ES6 and bundle the project using Vite
 - `preview` - preview the production build locally
