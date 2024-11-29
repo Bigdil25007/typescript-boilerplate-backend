@@ -2,7 +2,7 @@ import js from "@eslint/js";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-plugin-prettier";
-import vitest from "@vitest/eslint-plugin";
+import jestPlugin from "eslint-plugin-jest";
 import globals from "globals";
 
 export default [
@@ -14,7 +14,6 @@ export default [
         project: ["tsconfig.json"],
       },
       globals: {
-        ...globals.browser,
         ...globals.node,
         ...globals.jest,
       },
@@ -22,14 +21,13 @@ export default [
     plugins: {
       "@typescript-eslint": tsPlugin,
       prettier,
-      vitest,
+      jestPlugin,
     },
     rules: {
       /*Preset rules*/
       ...js.configs.recommended.rules,
       ...tsPlugin.configs["recommended-requiring-type-checking"].rules,
       ...tsPlugin.configs.strict.rules,
-      ...vitest.configs.recommended.rules,
 
       /*Custom rules*/
       "prettier/prettier": "error",
