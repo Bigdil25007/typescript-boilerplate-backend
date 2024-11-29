@@ -2,21 +2,21 @@ import http, { IncomingMessage, ServerResponse } from "http";
 
 const PORT: number = Number(process.env.PORT) || 3000;
 
-// Création du serveur HTTP
+// Create the HTTP server
 const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
-  // Définir l'en-tête de réponse
+  // Set the response header
   res.writeHead(200, { "Content-Type": "application/json" });
 
-  // Exemple de réponse JSON
+  // Example JSON response
   res.end(
     JSON.stringify({
-      message: "Bienvenue sur le serveur backend minimaliste !",
+      message: "Welcome to the minimalist backend server!",
       status: "success",
     })
   );
 });
 
-// Démarrage du serveur
+// Start the server
 server.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
+  console.log(`Server started at http://localhost:${PORT}`);
 });
