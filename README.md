@@ -1,15 +1,16 @@
-# TypeScript Frontend Boilerplate
+# TypeScript Backend Boilerplate
 
-This is a boilerplate project for building frontend applications using Vite and TypeScript. It includes configurations for ESLint, Prettier, Husky, and Vitest.
+This is a boilerplate project for building backend applications using TypeScript. It includes configurations for ESLint, Prettier, Husky, and Jest.
 
 ## Features
 
-- Vite for building and fast HMR
 - TypeScript support
 - ESLint for linting
 - Prettier for code formatting
+- TypeScript Compiler for building
+- Nodemon for fast HMR
 - Husky for Git hooks
-- Vitest for testing
+- Jest for testing
 
 ## Getting Started
 
@@ -21,8 +22,8 @@ This is a boilerplate project for building frontend applications using Vite and 
 ### Installation
 
 ```sh
-git clone https://github.com/Bigdil25007/typescript-boilerplate-frontend.git
-cd typescript-boilerplate-frontend
+git clone https://github.com/Bigdil25007/typescript-boilerplate-backend.git
+cd typescript-boilerplate-backend
 npm install
 ```
 
@@ -30,11 +31,11 @@ npm install
 
 - `check-type` - check for TypeScript type errors
 - `dev` - run on localhost
-- `build` - transpile TypeScript to ES6 and bundle the project using Vite
+- `build` - transpile TypeScript with TypeScript Compiler
 - `preview` - preview the production build locally
-- `test` - run tests once using Vitest
+- `test` - run tests once using Jest
 - `test:watch` - run tests in watch mode, re-running tests on file changes
-- `test:coverage` - run tests and generate a coverage report
+- `test:coverage` - run tests and generate a coverage report (HTML format)
 - `lint:dev` - lint source files in the `src` directory using ESLint
 - `lint:fix` - lint and fix source files in the `src` directory using ESLint
 - `lint:build` - run linting with no warnings allowed
@@ -53,7 +54,7 @@ Husky is configured to run linting, formatting, and tests before each commit. Th
 To customize the project, you can modify the following files:
 
 - **TypeScript Configuration**: Modify `tsconfig.json` to change TypeScript compiler options.
-- **ESLint Configuration**: Modify `.eslintrc.cjs` to change linting rules and settings.
+- **ESLint Configuration**: Modify `eslint.config.js` to change linting rules and settings.
 - **Prettier Configuration**: Modify `.prettierrc` to change code formatting rules.
 - **Husky Configuration**: Modify `.husky/pre-commit` to change pre-commit hooks.
 - **EditorConfig**: Modify `.editorconfig` to change editor settings.
@@ -64,19 +65,20 @@ To customize the project, you can modify the following files:
 ```
 .
 ├── .editorconfig
-├── eslint.config.js
 ├── .gitignore
 ├── .husky
 │   └── pre-commit
 ├── .nvmrc
 ├── .prettierignore
 ├── .prettierrc
+├── eslint.config.js
+├── jest.config.js
 ├── package.json
 ├── tsconfig.json
-├── vite.config.js
+├── tsconfig.build.json
 ├── src
-│   ├── main.ts
-│   └── main.test.ts
+│   ├── server.ts
+│   └── server.test.ts
 └── README.md
 ```
 
