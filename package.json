@@ -9,7 +9,7 @@
   "scripts": {
     "check-type": "tsc --noEmit",
     "dev": "nodemon --watch src --exec tsx src/server.ts",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "preview": "node dist/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
